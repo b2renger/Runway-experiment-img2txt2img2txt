@@ -1,0 +1,177 @@
+{
+    "name": "My categories",
+    "stories": [
+
+        {
+            "data": [{
+                "txt": "In the twilight rain \n these brilliant-hued hibiscus  \n - a lovely sunset"
+
+            }, {
+                "src": "./assets/haiku_basho_1_0.jpg"
+            }, {
+                "txt": "a black and white photo of a person on a skateboard"
+
+            }, {
+                "src": "./assets/haiku_basho_1_1.jpg"
+            }, {
+                "txt" : "a black and white photo of an airplane"
+            },  {
+                "src": "./assets/haiku_basho_1_2.jpg"
+            }, {
+                "txt" : "a black and white photo of a plane on a runway"
+            },  {
+                "src": "./assets/haiku_basho_1_3.jpg"
+            }, {
+                "txt" : "a black and white photo of an airplane"
+            },  {
+                "src": "./assets/haiku_basho_1_4.jpg"
+            }, {
+                "txt" : "a black and white photo of a plane on a runway"
+            }],
+            "categories": [
+                "text", "5 iterations"
+            ]
+        }
+        ,
+        {
+            "data": [{
+                "src": "./assets/flower.png"
+            }, {
+                "txt": "a close up of a person holding an umbrella"
+
+            }, {
+                "src": "./assets/flower2.jpg"
+            }, {
+                "txt": "a person sitting on a bench with a laptop "
+
+            }, {
+                "src": "./assets/flower3.jpg"
+            }, {
+                "txt": "a man sitting on a bench reading a book"
+
+            }, {
+                "src": "./assets/flower4.jpg"
+            }, {
+                "txt": "a man in a suit and tie sitting on a bench "
+
+            }, {
+                "src": "./assets/flower5.jpg"
+            }, {
+                "txt": "a man sitting on a bench in a park "
+
+            }, {
+                "src": "./assets/flower6.jpg"
+            }, {
+                "txt": "man standing in front of a stone wall"
+
+            }, {
+                "src": "./assets/flower7.jpg"
+            }, {
+                "txt": "man standing in front of a stone wall"
+
+            }],
+            "categories": [
+                "image", "7 iterations"
+            ]
+        }
+        ,
+        {
+            "data": [
+                {
+                    "txt": "a fox in the forest"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest.jpg"
+            }, {
+                    "txt": "a view of a city skyline from the sun"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest2.jpg"
+            }, {
+                    "txt": "a large building with a large clock tower"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest3.jpg"
+            }, {
+                    "txt": "a large building with a clock on the top"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest4.jpg"
+            }, {
+                    "txt": "a building with a clock on the front of it"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest5.jpg"
+            }, {
+                    "txt": "a building with a clock on the front of it'"
+
+            }, {
+                    "src": "./assets/a-fox-in-the-forest6.jpg"
+            }, {
+                    "txt": "a clock on the side of a building"
+            }, {
+                    "src": "./assets/a-fox-in-the-forest7.jpg"
+            }, {
+                    "txt": "a large clock on the side of a building"
+            }
+
+            ],
+            "categories": [
+                "text", "7 iterations"
+            ]
+        }
+        ,
+        {
+            "data": [{
+                "src": "./assets/bulbasaur.jpg"
+            }, {
+                "txt": "a piece of cake sitting on top of a white plate"
+
+            }, {
+                "src": "./assets/bulbasaur2.jpg"
+            }, {
+                "txt": "a piece of cake on a plate with a fork"
+
+            }, {
+                "src": "./assets/bulbasaur3.jpg"
+            }, {
+                "txt": "a piece of cake on a plate with a fork"
+
+            }, {
+                "src": "./assets/bulbasaur4.jpg"
+            }, {
+                "txt": "a piece of cake on a plate with a fork"
+
+            }],
+            "categories": [
+                "image", "4 iterations"
+            ]
+        }
+        ,
+        {
+            "data": [{
+                "src": "./assets/doublebass.jpg"
+            }, {
+                "txt": "a statue of a man sitting on top of a table"
+
+            }, {
+                "src": "./assets/doublebass2.jpg"
+            }, {
+                "txt": "a vase filled with flowers sitting on top of a table"
+
+            }, {
+                "src": "./assets/doublebass3.jpg"
+            }, {
+                "txt": "a vase filled with flowers sitting on top of a table"
+
+            }],
+            "categories": [
+                "image", "3 iterations"
+            ]
+        }
+
+
+
+
+    ]
+}

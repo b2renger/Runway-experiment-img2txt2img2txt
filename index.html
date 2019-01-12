@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #header {
+            text-align: center;
+            background: #d37c24;
+        }
+
+        .item img {
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+            flex-direction: column;
+        }
+
+        .item img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.095);
+        }
+
+        .item h3:hover {
+            filter: grayscale(0%);
+            transform: scale(1.095);
+        }
+
+        .is-horizontal-center {
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        var legos;
+        $(document).ready(function() {
+            $.getJSON("data.json", function(data) {
+                legos = data.stories;
+
+                $.each(data.stories, function(indexInArray, story) {
+                    var myColumn = $('<div class="item column is-3 content" data-id="' +
+                        indexInArray + '"></div>');
+
+
+
+                    //myColumn.append('<h3>' + story.title + '</h3>');
+
+                    $.each(story.categories, function(indexInArray, category) {
+                        myColumn.addClass(category);
+                        myColumn.append('<span class="tag is-info">' + category +
+                            '</span> ');
+                        myColumn.append('<h3></h3>');
+                    });
+
+
+                    if (story.data) {
+                        if (story.data.length > 0) {
+                            for (var i = 0; i < story.data.length; i++) {
+                                if (story.data[i].src) {
+                                    myColumn.append('<img src="' + story.data[i].src + '" />');
+                                } else if (story.data[i].txt) {
+                                    myColumn.append('<h3>' + story.data[i].txt + '</h3>');
+                                }
+                                myColumn.append('<figure ><img class="image is-48x48" src="./assets/baseline-keyboard_arrow_down-24px.svg" /></figure>');
+                            }
+                            myColumn.append('<div class="card-content is-flex is-horizontal-center"><figure class="image is-64x64" class="is-rounded"> <img  src="./assets/baseline-loop-24px.svg" /></figure></div>');
+                        }
+                    }
+
+
+                    $('#app').append(myColumn);
+                });
+
+            });
+
+            $('#categories a').on('click', function(e) {
+                e.preventDefault();
+                $(this).toggleClass('is-active is-info');
+                updateContent();
+            });
+
+
+        });
+
+        function updateContent() {
+
+            console.clear();
+            $('.item').hide();
+
+            $.each($('#categories .is-active'), function(indexInArray, currentCategories) {
+                console.log(indexInArray + ' ' + $(this).data('category'));
+
+                if ($(this).data('category') == 'all') {
+                    $('.item').show();
+                }
+
+                $('.' + $(this).data('category')).show();
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--<section id="header"><img src="solo-group.png" alt=""></section>-->
+
+    <section class="section">
+
+        <div class="container">
+            <p>This page shows the results of experiments using <a href="https://runwayapp.ai/">Runway</a>. The principle is to create a feedback loop between the <a href="https://arxiv.org/abs/1609.06647">img2txt</a> model and the <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Xu_AttnGAN_Fine-Grained_Text_CVPR_2018_paper.pdf">AttnGan</a> model : img2txt converts an image in a text description, and AttnGan tries to generate an image from a text.</p>
+            <br></br>
+            <div id="categories">
+                <a href="#" class="button is-active is-info" data-category="all">ALL</a>
+                <a href="#" class="button" data-category="image">image as source</a>
+                <a href="#" class="button" data-category="text">text as source</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline has-text-centered" id="app"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
